@@ -170,7 +170,7 @@
     // Hotkeys: 1-5 for home, 6-0 for away
     document.addEventListener("keydown", (e) => {
       if (e.key >= "1" && e.key <= "5") updateStat(parseInt(e.key) - 1, "home");
-      else if (e.key >= "6" && e.key <= "0") updateStat(parseInt(e.key) - 6, "away");
+      if (e.key >= "6" && e.key <= "0") updateStat(parseInt(e.key) - 6, "away");
     });
 
     function updateStat(rowIndex, teamClass) {
