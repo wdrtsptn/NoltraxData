@@ -125,3 +125,10 @@ function showFinalPossession(){
   finalPossessionEl.textContent=`Ball Possession Final: Home ${homePct}% — Away ${awayPct}%`;
 }
 (function(){const today=new Date().toISOString().split('T')[0];if(!matchDateInput.value)matchDateInput.value=today;})();
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  sidebar.classList.toggle('active');
+});
