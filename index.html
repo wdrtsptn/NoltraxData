@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Noltrax</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="title">Noltrax</h1>
+
+  <div class="wrap">
+    <header>
+      <div class="row">
+        <input type="text" id="matchName" placeholder="Match Name">
+        <input type="date" id="matchDate">
+      </div>
+      <div class="row">
+        <input type="text" id="homeName" placeholder="Team Home">
+        <input type="text" id="awayName" placeholder="Team Away">
+      </div>
+    </header>
+
+    <div class="table-card">
+      <table id="statsTable">
+        <thead>
+          <tr>
+            <th style="text-align:left;">Aksi</th>
+            <th class="home">Home</th>
+            <th class="away">Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td contenteditable="true">Pass</td><td class="home" data-row="0">0</td><td class="away" data-row="0">0</td></tr>
+          <tr><td contenteditable="true">Shoot</td><td class="home" data-row="1">0</td><td class="away" data-row="1">0</td></tr>
+          <tr><td contenteditable="true">Tackle</td><td class="home" data-row="2">0</td><td class="away" data-row="2">0</td></tr>
+          <tr><td contenteditable="true">Foul</td><td class="home" data-row="3">0</td><td class="away" data-row="3">0</td></tr>
+          <tr><td contenteditable="true">Corner</td><td class="home" data-row="4">0</td><td class="away" data-row="4">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="hint">
+      Hotkeys: <span class="kbd">1–5</span> = Home • <span class="kbd">6–9,0</span> = Away • 
+      <span class="kbd">Q</span> = Switch Stopwatch / double-tap stop semua
+    </p>
+
+    <div class="stopwatch">
+      <div class="pos" id="homePos"> Home Possession: <span id="homeTime">00:00</span></div>
+      <div class="pos" id="awayPos"> Away Possession: <span id="awayTime">00:00</span></div>
+      <div class="pos" id="livePos"> Live Ball Possession: <span id="livePossession">0% - 0%</span></div>
+    </div>
+
+    <div class="controls">
+      <button class="primary" id="saveBtn">Save</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="final-possession" id="finalPossession"></div>
+  </div>
+
+  <footer class="slide-in-left">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About</h3>
+        <p>
+          NoltraxData adalah aplikasi web ringan untuk mencatat statistik pertandingan sepakbola dan menghitung ball possession secara real-time.  
+          Dikembangkan oleh SnorthfU untuk membantu analis, pelatih, dan penggemar memahami jalannya permainan secara cepat dan efisien.
+        </p>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="match-history.html">Match History</a></p>
+      </div>
+
+      <div class="footer-section credit">
+        <h3>Credit</h3>
+        <p>©2025 <strong>SNORTFU</strong></p>
+        <p>Designed by <strong>Widiarto Septian</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
